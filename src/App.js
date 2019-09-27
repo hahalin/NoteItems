@@ -7,6 +7,8 @@ import config from './config';
 import Notes from './Components/Notes';
 import NewNoteItemWin from './Components/NewNoteItemWin';
 
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 //const dotenv = require('dotenv');
 //const env = dotenv.config().parsed;
@@ -86,6 +88,15 @@ class App extends Component {
   }
 
   render(){
+
+
+    return (
+      <div className="wrapper">
+        <Header/>
+        <Sidebar/>
+        <div className="content-wrapper"></div>
+      </div>
+    );
 
     const {notes,openNewWin,loading}=this.state;
     return  (
