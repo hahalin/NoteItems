@@ -28,7 +28,7 @@ const Header = () => {
                                         <li>
                                             <a href="#">
                                                 <div className="pull-left">
-                                                    <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="User Image" />
+                                                    <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="" />
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -41,7 +41,7 @@ const Header = () => {
                                         <li>
                                             <a href="#">
                                                 <div className="pull-left">
-                                                    <img src="dist/img/user3-128x128.jpg" className="img-circle" alt="User Image" />
+                                                    <img src="dist/img/user3-128x128.jpg" className="img-circle" alt="" />
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -53,7 +53,7 @@ const Header = () => {
                                         <li>
                                             <a href="#">
                                                 <div className="pull-left">
-                                                    <img src="dist/img/user4-128x128.jpg" className="img-circle" alt="User Image" />
+                                                    <img src="dist/img/user4-128x128.jpg" className="img-circle" alt="" />
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -65,7 +65,7 @@ const Header = () => {
                                         <li>
                                             <a href="#">
                                                 <div className="pull-left">
-                                                    <img src="dist/img/user3-128x128.jpg" className="img-circle" alt="User Image" />
+                                                    <img src="dist/img/user3-128x128.jpg" className="img-circle" alt="" />
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -77,7 +77,7 @@ const Header = () => {
                                         <li>
                                             <a href="#">
                                                 <div className="pull-left">
-                                                    <img src="dist/img/user4-128x128.jpg" className="img-circle" alt="User Image" />
+                                                    <img src="dist/img/user4-128x128.jpg" className="img-circle" alt="" />
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -211,13 +211,13 @@ const Header = () => {
 
                         <li className="dropdown user user-menu">
                             <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                <img src="dist/img/user2-160x160.jpg" className="user-image" alt="User Image" />
+                                <img src="dist/img/user2-160x160.jpg" className="user-image" alt="" />
                                 <span className="hidden-xs">Alexander Pierce</span>
                             </a>
                             <ul className="dropdown-menu">
 
                                 <li className="user-header">
-                                    <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="User Image" />
+                                    <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="" />
 
                                     <p>
                                         Alexander Pierce - Web Developer
