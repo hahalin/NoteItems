@@ -17,8 +17,8 @@ import Sidebar from "./Sidebar";
 
 class App extends Component {
   
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.handleClose=this.handleClose.bind(this);
     this.handleSubmit=this.handleSubmit.bind(this);
     this.handleChange=this.handleChange.bind(this);
@@ -34,6 +34,7 @@ class App extends Component {
   
   componentWillMount()
   {
+    return;
     this.getNotes();
   }
 
@@ -94,7 +95,9 @@ class App extends Component {
       <div className="wrapper">
         <Header/>
         <Sidebar/>
-        <div className="content-wrapper"></div>
+        <div className="content-wrapper">
+           {this.props.children}
+        </div>
       </div>
     );
 
