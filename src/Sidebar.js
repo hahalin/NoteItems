@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {compose} from 'redux';
+import * as actions from './actions';
 
-const Sidebar = () => {
-
-  return (
+const Sidebar = (props) => {
+  return ( 
     <aside className="main-sidebar">
       <section className="sidebar">
 
@@ -20,9 +22,12 @@ const Sidebar = () => {
         
         <ul className="sidebar-menu" data-widget="tree">
           <li className="header">MAIN NAVIGATION</li>
+          <li>
+            <Link to="/"><i className="fa fa-home"></i>首頁</Link>
+          </li>
           <li className="active treeview">
             <a href="#">
-              <i className="fa fa-dashboard"></i> <span>用戶登入</span>
+              <i className="fa fa-user"></i> <span>用戶登入</span>
               <span className="pull-right-container">
                 <i className="fa fa-angle-left pull-right"></i>
               </span>
@@ -31,23 +36,12 @@ const Sidebar = () => {
               <li>
                 <Link to="/">Redux Auth</Link>
                 <Link to="/signup">signup</Link>
-                <Link to="/signin">signin</Link>
+                <Link to="/login">login</Link>
                 <Link to="/signout">signout</Link>
                 <Link to="/noteitems">noteitems</Link>
               </li>            
             </ul>
           </li>
-          <li className="treeview">
-            <a href="#">
-              <i className="fa fa-files-o"></i>
-              <span>Layout Options</span>
-              <span className="pull-right-container">
-                <span className="label label-primary pull-right">4</span>
-              </span>
-            </a>
-            
-          </li>
-        
         </ul>
       </section>
 
@@ -56,4 +50,14 @@ const Sidebar = () => {
 
 }
 
-export default Sidebar;
+function mapStateToProps(state){
+  return {
+      authenicated:state.auth.authenicated
+  }
+}
+
+
+export default compose(
+  connect(mapStateToProps,actions)
+)(Sidebar);
+

@@ -152,7 +152,7 @@ const Header = () => {
                                                 <div className="progress xs">
                                                     <div className="progress-bar progress-bar-aqua" style={{"width": "20%"}} role="progressbar"
                                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">20% Complete</span>
+                                                        <span className="sr-only">20% Complete</span>
                                                     </div>
                                                 </div>
                                             </a>
