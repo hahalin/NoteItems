@@ -11,11 +11,14 @@ import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import Welcome from './Components/Welcome';
 import Login from './Components/Login';
+import Logout from './Components/Logout';
 import MyNotes from './Components/MyNotes';
 
 const store=createStore(
     reducers,
-    {},
+    {
+        auth:{authenicated:localStorage.getItem('token')}
+    },
     applyMiddleware(reduxThunk)
 );
 
@@ -25,6 +28,7 @@ ReactDOM.render(
             <App>
                 <Route path="/" exact component={Welcome} />
                 <Route path="/login" component={Login} /> 
+                <Route path="/logout" component={Logout} /> 
                 <Route path="/mynotes" component={MyNotes} />
             </App>
         </BrowserRouter>

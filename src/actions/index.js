@@ -1,6 +1,14 @@
 import axios from 'axios';
-import {AUTH_USER,LOGIN_USER,LOGIN_ERROR} from './types';
+import {AUTH_USER,LOGIN_USER,LOGOUT_USER,LOGIN_ERROR} from './types';
 import config from '../config';
+
+export const logout=()=>{
+    localStorage.removeItem('token');
+    return {
+        type:AUTH_USER,
+        payload:''
+    };
+}
 
 export const login=(formprops,callback)=>async dispatch => 
 {
@@ -17,6 +25,7 @@ export const login=(formprops,callback)=>async dispatch =>
             type:AUTH_USER,
             payload:response.data.token
         });
+        localStorage.setItem('token',response.data.token);
         callback();
     }
     catch(e)

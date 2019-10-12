@@ -7,12 +7,9 @@ import * as actions from '../actions';
 class Login extends Component {
 
     onSubmit=(formProps)=>{
-        console.log(formProps);
-        this.props.login(formProps,this.callback);
-    }
-
-    callback=()=>{
-        alert('callback');
+        this.props.login(formProps,()=>{
+            this.props.history.push('/');
+        });
     }
 
     render(){
