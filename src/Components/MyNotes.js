@@ -22,9 +22,12 @@ class MyNotes extends Component {
   }
 
   getNotes() {
+    const header = {Authorization:`${localStorage.getItem('token')}`};
+
     axios.request({
       method: 'get',
-      url: config.apiUrl + '/notes/'
+      url: config.apiUrl + '/notes/',
+      headers:header,
     }).then((response) => {
       this.setState({ notes: response.data, loading: false }, () => {
       });

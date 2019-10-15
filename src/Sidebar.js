@@ -41,7 +41,7 @@ class Sidebar extends Component {
               <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="" />
             </div>
             <div className="pull-left info">
-              <p>Alexander Pierce</p>
+              <p>###</p>
               <a href="#"><i className="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>

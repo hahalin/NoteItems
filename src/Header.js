@@ -212,7 +212,7 @@ const Header = () => {
                         <li className="dropdown user user-menu">
                             <a href="#" className="dropdown-toggle" data-toggle="dropdown">
                                 <img src="dist/img/user2-160x160.jpg" className="user-image" alt="" />
-                                <span className="hidden-xs">Alexander Pierce</span>
+                                <span className="hidden-xs">###</span>
                             </a>
                             <ul className="dropdown-menu">
 

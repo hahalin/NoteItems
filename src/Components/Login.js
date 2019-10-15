@@ -31,7 +31,7 @@ class Login extends Component {
                                     <Field
                                         name="nm" type="text"
                                         component="input"
-                                        autoComplete="none"
+                                        autocomplete="off"
                                     >
                                     </Field>
                                 </fieldset>
@@ -40,7 +40,7 @@ class Login extends Component {
                                     <Field
                                         name="pwd" type="password"
                                         component="input"
-                                        autoComplete="none"
+                                        autocomplete="off"
                                     >
                                     </Field>
                                 </fleldset>
