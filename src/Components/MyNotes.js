@@ -27,6 +27,7 @@ class MyNotes extends Component {
   }
 
   getNotes() {
+    this.setState({loading:true});
     const header = { Authorization: `${localStorage.getItem('token')}` };
     axios.request({
       method: 'get',
@@ -54,13 +55,13 @@ class MyNotes extends Component {
     let title = this.state.title;
     let desc = this.state.desc;
     let $this = this;
-    this.setState({ loading: true, openNewWin: false });
+    this.setState({ loading: false, openNewWin: false });
     axios.post(
         config.apiUrl + '/notes',
         {
           title: title,
           description: desc
-        }
+        } 
         ,{headers:{ Authorization: `${localStorage.getItem('token')}` }}
       )
       .then(function (response) {
@@ -97,7 +98,7 @@ class MyNotes extends Component {
                 <div className="box-body">
                   {loading &&
                     <Spinner animation="border" role="status">
-                      <span className="sr-only">讀取中...</span>
+                      <span className="">讀取中...</span>
                     </Spinner>
                   }
                   {!loading && <Notes notes={this.state.notes} />}
