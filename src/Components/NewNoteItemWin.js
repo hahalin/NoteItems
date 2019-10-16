@@ -5,18 +5,8 @@ class NewNoteItemWin extends Component {
     
     constructor(props){
         super();
-        //this.handleChangeTitle=this.handleChangeTitle.bind(this);
-        //this.handleChangeDesc=this.handleChangeDesc.bind(this);
         this.handleChange=this.handleChange.bind(this);
     }
-
-    // handleChangeTitle(evt){
-    //     this.setState({title:evt.target.value});
-    // }
-
-    // handleChangeDesc(evt){
-    //     this.setState({desc:evt.target.value});
-    // }
 
     handleChange(e) {
         this.props.onChange(e.target);
@@ -25,7 +15,7 @@ class NewNoteItemWin extends Component {
     render(){
         const {show,handleClose}=this.props;
         return (
-            <Modal show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} animation={false}>
                 <Form autoComplete="off" onSubmit={this.props.onSubmit}>
                     <Modal.Header closeButton>
                         <Modal.Title>新增記事項目</Modal.Title>
@@ -46,7 +36,7 @@ class NewNoteItemWin extends Component {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <div class="container text-center">
+                        <div className="container text-center">
                             <Button variant="primary" type="submit">新增儲存</Button>
                             <Button variant="secondary" onClick={this.props.handleClose}>取消離開</Button>
                         </div>
